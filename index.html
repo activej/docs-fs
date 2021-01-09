@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ FS | Create efficient and scalable distributed storage with data redundancy, rebalancing, and resharding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" ActiveJ FS provides a tiny abstraction over local, remote, or distributed file systems with support of data redundancy, rebalancing, and resharding ">
+    <meta name="keywords" content=" storage,distributed storage,redundancy,rebelancing,kernel-space,java framework,ftp protocol,append-only ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ FS</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container-wrapper">
+    <div class="container">
+        <div class="slider">
+            <div class="slider__text">
+                <h1 id="animatedLogo" text="ActiveJ FS" class="mb-4 mt-4 slider__text__logo" align="center"></h1>
+                Lightweight abstraction for efficient management of scalable file systems
+            </div>
+        </div>
+        <div class="container-radius pb-4">
+            <div class="row mx-0 slider-buttons">
+                <a href="examples.html" class="col-5 slider-buttons__get-started-button">
+                    GET STARTED
+                </a>
+                <a href="https://github.com/activej/activej/tree/v4.3/cloud-fs" target="_blank" class="col-4 slider-buttons__github-button">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="paper__wrapper">
+    <div class="container features">
+        <div class="mx-3">
+            <h3>What is ActiveJ FS?</h3>
+            <p class="features__text">ActiveJ FS is a lightweight asynchronous Java library that provides a tiny abstraction on
+                top of common file operations. It provides upload, download, append, list, copy, move, delete, and other
+                methods for operating with local, remote or distributed storage.
+                <br>
+                <br>
+            <h3>Where ActiveJ FS can be used?</h3>
+            There are several ActiveJ FS implementations:
+            <ul>
+                <li><b>Local ActiveJ FS</b> designed for working with file systems located on a single machine. Ideal to
+                    implement a <b>local file storage for your application</b>, for example database storage, backup data storage, local
+                    logs storage, etc.</li>
+                <li><b>Client/Server implementations</b> for operating with files that are stored remotely. This
+                    implementation supports two protocols:</li>
+                <ul>
+                    <li>Custom <b>TCP-based binary protocol</b> with zero overhead. Resembles FTP, but simpler and more efficient.</li>
+                    <li><b>HTTP protocol</b> that allows to define a REST API. It also provides third-party clients like browsers
+                        access remote ActiveJ FS servers.</li>
+                </ul>
+                <li><b>Cluster ActiveJ FS</b> is designed for distributed big data workload. It's optimized for processing large
+                    immutable datasets or append-only files. Cluster ActiveJ FS was intentionally made
+                    <b>not POSIX-compilant</b> and works only with <b>immutable files</b>.
+                    In this way
+                    the whole system is simple, lightweight and resilient to server or network failures. Also, this approach
+                    allows to avoid the overhead of master-slave architecture and synchronization of mutable files.
+                    With ActiveJ FS you can create distributed, scalable P2P file systems with built-in support for rebalancing,
+                    failover, and scalability.</li>
+                <li><b>ActiveJ FS Adapters</b> enable filtering, mounting, transforming file names, adding and removing prefixes,
+                    subdirectories, etc.</li>
+            </ul>
+            </p>
+            <div class="row my-4 justify-content-between samples">
+                <div class="samples__text-wrapper col-lg-5 col-md-12 pr-5">
+                    <h3>Efficiently work with distributed file storage</h3>
+                    <div class="mb-2 features__text">ActiveJ FS is an <b>efficient and lightweight alternative for
+                        kernel space distributed FS</b> like Ceph or Apache Hadoop. ActiveJ FS is like IPFS on the scale
+                        of a single data center It allows to create combined, fault-tolerant cluster NFS. Moreover,
+                        ActiveJ FS contains a set of predefined communication strategies that can be
+                        simply combined.
+                    </div>
+
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <figure class="highlight m-0"><pre><code class="language-java" data-lang="java"><span
+                            class="kd">private</span> <span class="n">RemoteFsClusterClient</span> <span
+                            class="n">client</span><span class="o">;</span>
+
+    <span class="o">...</span>
+
+<span class="n">Eventloop</span> <span class="n">eventloop</span> <span class="o">=</span> <span
+                                class="n">Eventloop</span><span class="o">.</span><span class="na">create</span><span
+                                class="o">();</span>
+
+<span class="n">Map</span><span class="o">&lt;</span><span class="n">Object</span><span class="o">,</span> <span
+                                class="n">FsClient</span><span class="o">&gt;</span> <span
+                                class="n">clients</span> <span
+                                class="o">=</span> <span class="o">...;</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">RemoteFsClusterClient</span><span
+                                class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span
+                                class="o">,</span> <span class="n">clients</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withReplicationCount</span><span class="o">(</span><span class="n">N</span> <span
+                                class="o">/</span> <span class="mi">2</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">withServerSelector</span><span class="o">(</span><span class="n">RENDEZVOUS_HASH_SHARDER</span><span
+                                class="o">);</span></code></pre>
+                    </figure>
+
+                </div>
+            </div>
+            <div class="my-4 justify-content-between samples">
+                <div class="samples__text-wrapper pr-5">
+                    <h3>Add ActiveJ FS to your project</h3>
+                    <div class="samples__text-wrapper mb-4">
+                        <div class="features__text"> You can add ActiveJ FS to your project by importing its Maven
+                            repository.<br>
+                            These docs cover the most recent release of ActiveJ FS
+                            <b>v4.3</b>
+                            <small>(see on <a href="https://github.com/activej/activej/tree/v4.3/cloud-fs">GitHub</a> or <a href="https://mvnrepository.com/artifact/io.activej/activej-fs">Maven</a> )
+                            </small>.<br>
+                        </div>
+                    </div>
+
+                    <h3>Project background</h3>
+                    <p class="features__text">ActiveJ FS is one of the ActiveJ technologies that also include
+                        lightning-fast
+                        serializers, bytecode generators, dependency injection tools and other technologies. To learn more about
+                        ActiveJ technologies, visit <a href="https://activej.io">ActiveJ</a> website.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

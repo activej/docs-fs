@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176574648-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176574648-1');
+    </script>
+    
+    <link rel='stylesheet' href='/static/css/pygment_trac.css'/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <title>ActiveJ FS | Java library for efficient and scalable distributed storage with data redundancy, rebalancing, and resharding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" ActiveJ FS | Java library for efficient and scalable distributed storage with data redundancy, rebalancing, and resharding ">
+    <meta name="keywords" content=" storage,distributed storage,redundancy,rebelancing,kernel-space,java framework,ftp protocol,append-only ">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name="og:description" content="ActiveJ is an alternative Java platform built from the ground up as a replacement of Spring, Spark, Quarkus, Micronauts, and other solutions. It is minimalistic, boilerplate-free, and provides outstanding performance." />
+    <meta name="og:image" content="https://activej.io/static/images/AJ_Card.jpeg" />
+    <meta name="og:title" content="ActiveJ - An Alternative Java platform built for web, high load, and cloud development" />
+</head>
+<body>
+    <div class="navbar-container-wrapper">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <ul class="navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                <div class="logo-link-title mr-5">
+                    <img src="/favicon.png" style="max-width: 25px">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <a class="navbar-nav__link logo-link-title" href="/" style="margin-left: 5px">ActiveJ FS</a>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </ul>
+            <button class="navbar-toggler m-1 ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <div class="container">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <ul class="navbar-nav navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                        
+                        <li>
+                            <a class="navbar-nav__link nav-expanded" href="/examples.html">
+                                Examples
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <span>
+              <ul class="navbar-nav expanded-links navbar-nav-visible mr-auto mt-1 mt-lg-0">
+                  <li class="dropdown">
+                    <a class="nav-link nav-expanded">Components</a>
+                    <ul class="dropdown__content">
+                        
+                            <div class="dropdown__content-wrapper">
+                                
+                                    <a href="https://activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://activej.io">ActiveJ</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Redefining Java for modern web applications </p>
+                                    </a>
+                                
+                                    <a href="https://inject.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://inject.activej.io">ActiveJ Inject</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast and ultimately powerful DI library </p>
+                                    </a>
+                                
+                                    <a href="https://serializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://serializer.activej.io">ActiveJ Serializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> The fastest JVM serializer in the world </p>
+                                    </a>
+                                
+                                    <a href="https://codegen.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://codegen.activej.io">ActiveJ Codegen</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Dynamic bytecode generation without overhead of reflection </p>
+                                    </a>
+                                
+                                    <a href="https://specializer.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://specializer.activej.io">ActiveJ Specializer</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> A little bit of magic to speed up your code </p>
+                                    </a>
+                                
+                                    <a href="https://rpc.activej.io" class="dropdown__content__item ">
+                                        <li>
+                                            <div href="https://rpc.activej.io">ActiveJ RPC</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Lightning-fast binary protocol for microservices architecture </p>
+                                    </a>
+                                
+                                    <a href="https://fs.activej.io" class="dropdown__content__item  selected-link ">
+                                        <li>
+                                            <div href="https://fs.activej.io">ActiveJ FS</div>
+                                        </li>
+                                        <p class="dropdown__content__item__text"> Tiny abstraction for managing local, remote, and distributed FS </p>
+                                    </a>
+                                
+                           </div>
+                        
+                    </ul>
+                </li>
+                  <li><a class="navbar-nav__link" href="https://activej.io/blog/release-notes.html">Blog</a> </li>
+                <li><a class="navbar-nav__link" href="http://uikernel.io">UIKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://adkernel.com">AdKernel</a></li>
+                <li><a class="navbar-nav__link" href="https://github.com/activej/activej">GitHub</a></li>
+                <li><a class="navbar-nav__link" href="/about.html">About us</a></li>
+              </ul>
+            </span>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <div class="content">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="px-0 mb-3 sidebar">
+    
+<h3>Examples</h3>
+<ul>
+    
+    <li>
+        <a href="/examples.html#server-setup">Server Setup</a>
+    </li>
+    
+    <li>
+        <a href="/examples.html#file-upload">File Upload</a>
+    </li>
+    
+    <li>
+        <a href="/examples.html#file-download">File Download</a>
+    </li>
+    
+    <li>
+        <a href="/examples.html#activefs-decorator">ActiveFs Decorator</a>
+    </li>
+    
+    <li>
+        <a href="/examples.html#cluster-file-storage">Distributed Cluster Storage</a>
+    </li>
+    
+</ul>
+
+
+</div>
+<div class="pr-3 markdown-content docs-content">
+    <div class="status-wrapper">
+        <h1>ActiveJ FS Examples </h1>
+    </div>
+    <ul>
+  <li><a href="#server-setup">Server Setup Example</a> - configuring and launching <code class="language-plaintext highlighter-rouge">ActiveFsServer</code>.</li>
+  <li><a href="#file-upload">File Upload Example</a> - uploading file to <code class="language-plaintext highlighter-rouge">ActiveFsServer</code>.</li>
+  <li><a href="#file-download">File Download Example</a> - downloading file from <code class="language-plaintext highlighter-rouge">ActiveFsServer</code>.</li>
+  <li><a href="#activefs-decorator">ActiveFs Decorator Example</a> - decorating <code class="language-plaintext highlighter-rouge">ActiveFs</code>.</li>
+  <li><a href="#cluster-file-storage">Cluster File Storage</a> - creating a distributed cluster file storage.</li>
+</ul>
+
+<p>To run the examples in an IDE, you need to clone ActiveJ project:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git clone https://github.com/activej/activej</code></pre></figure>
+
+<p>And import it as a Maven project. Check out branch <strong>v4.3</strong>. Before running the example, build the project (<strong>Ctrl + F9</strong> for IntelliJ IDEA).</p>
+
+<h3 id="server-setup">Server Setup</h3>
+<p>Let’s have a closer look at <strong>Server Setup Example</strong>. To make setup and launching as simple as possible, there is a 
+special <a href="https://github.com/activej/activej/blob/v4.3/launchers/fs/src/main/java/io/activej/launchers/fs/SimpleTcpServerLauncher.java"><strong>SimpleTcpServerLauncher</strong></a>, 
+an <a href="https://activej.io/launcher.html">ActiveJ <strong>Launcher</strong></a> implementation (abstracted implementation of <em>main</em> 
+methods). It allows to simply set up applications, so all you need to set up an FS server is to override several Launcher 
+methods:</p>
+<ul>
+  <li><em>onInit</em> - runs prior to application start</li>
+  <li><em>getOverrideModule</em> - overrides Launcher’s default internal module definitions</li>
+  <li><em>run</em> - Launcher’s main method, represents business logic</li>
+</ul>
+
+<p>Then <em>launch</em> the <a href="https://github.com/activej/activej/blob/v4.3/launcher/src/main/java/io/activej/launcher/Launcher.java"><strong>Launcher</strong></a>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ServerSetupExample</span> <span class="kd">extends</span> <span class="nc">SimpleTcpServerLauncher</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="nc">Path</span> <span class="n">storage</span><span class="o">;</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onInit</span><span class="o">(</span><span class="nc">Injector</span> <span class="n">injector</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="n">storage</span> <span class="o">=</span> <span class="nc">Files</span><span class="o">.</span><span class="na">createTempDirectory</span><span class="o">(</span><span class="s">"server_storage"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="nc">Config</span> <span class="nf">createConfig</span><span class="o">()</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">createConfig</span><span class="o">()</span>
+				<span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"activefs.path"</span><span class="o">,</span> <span class="n">storage</span><span class="o">.</span><span class="na">toString</span><span class="o">())</span>
+				<span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="s">"activefs.listenAddresses"</span><span class="o">,</span> <span class="s">"6732"</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="n">awaitShutdown</span><span class="o">();</span>
+	<span class="o">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+		<span class="nc">Launcher</span> <span class="n">launcher</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ServerSetupExample</span><span class="o">();</span>
+		<span class="n">launcher</span><span class="o">.</span><span class="na">launch</span><span class="o">(</span><span class="n">args</span><span class="o">);</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/ServerSetupExample.java">See full source code on GitHub</a></strong></p>
+
+<h3 id="file-upload">File Upload</h3>
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileUploadExample.java"><strong>FileUploadExample</strong></a> also extends <code class="language-plaintext highlighter-rouge">Launcher</code> and thus implements the aforementioned <strong>Launcher</strong> methods.</p>
+
+<p>In this example we will use a <a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/ActiveFs.java"><strong>ActiveFs</strong></a> instance which depends on asynchronous <a href="https://activej.io/eventloop.html">ActiveJ <strong>Eventloop</strong></a>.
+To simplify working with dependencies we will use <a href="https://inject.activej.io">ActiveJ Inject</a> DI library. It is 
+lightning-fast, efficient and perfectly compatible with Launcher. So we simply <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/annotation/Inject.java"><strong>@Inject</strong></a> 
+two instances and <a href="https://github.com/activej/activej/blob/v4.3/core-inject/src/main/java/io/activej/inject/annotation/Provides.java"><strong>@Provides</strong></a> factory methods.
+Just like in the previous example, we will also overwrite <strong>Launcher</strong> methods <em>onInit</em>, <em>getOverrideModule</em>, and <em>run</em>.</p>
+
+<p>Also, this example utilizes ActiveJ <a href="https://activej.io/csp.html">CSP</a> component, particularly <a href="https://github.com/activej/activej/blob/v4.3/core-csp/src/main/java/io/activej/csp/file/ChannelFileReader.java"><strong>ChannelFileReader</strong></a> class. 
+It allows to asynchronously read binary data from files.</p>
+
+<p>You can see full example sources on <a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileUploadExample.java">GitHub</a>, 
+here we will consider only the upload process that is defined in the overwritten method <em>run</em>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+	<span class="nc">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">newSingleThreadExecutor</span><span class="o">();</span>
+	<span class="nc">CompletableFuture</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">eventloop</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+			<span class="c1">// consumer result here is a marker of it being successfully uploaded</span>
+			<span class="nc">ChannelFileReader</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="n">clientFile</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">then</span><span class="o">(</span><span class="n">cfr</span> <span class="o">-&gt;</span> <span class="n">cfr</span><span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="n">client</span><span class="o">.</span><span class="na">upload</span><span class="o">(</span><span class="no">FILE_NAME</span><span class="o">,</span> <span class="no">EXAMPLE_TEXT</span><span class="o">.</span><span class="na">length</span><span class="o">())))</span>
+					<span class="o">.</span><span class="na">whenResult</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%nFile '%s' successfully uploaded%n%n"</span><span class="o">,</span> <span class="no">FILE_NAME</span><span class="o">))</span>
+	<span class="o">);</span>
+	<span class="k">try</span> <span class="o">{</span>
+		<span class="n">future</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+	<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+		<span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileUploadExample.java">See full source code on GitHub</a></strong></p>
+
+<h3 id="file-download">File Download</h3>
+<p><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileDownloadExample.java"><strong>FileDownloadExample</strong></a> 
+has an implementation that is similar to the <strong>File Upload</strong> example. You can see full example sources on <a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileDownloadExample.java">GitHub</a>, 
+here we will consider only the download process that is defined in the overwritten method <em>run</em>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+	<span class="nc">ExecutorService</span> <span class="n">executor</span> <span class="o">=</span> <span class="n">newSingleThreadExecutor</span><span class="o">();</span>
+	<span class="nc">CompletableFuture</span><span class="o">&lt;</span><span class="nc">Void</span><span class="o">&gt;</span> <span class="n">future</span> <span class="o">=</span> <span class="n">eventloop</span><span class="o">.</span><span class="na">submit</span><span class="o">(()</span> <span class="o">-&gt;</span>
+			<span class="nc">ChannelSupplier</span><span class="o">.</span><span class="na">ofPromise</span><span class="o">(</span><span class="n">client</span><span class="o">.</span><span class="na">download</span><span class="o">(</span><span class="no">REQUIRED_FILE</span><span class="o">))</span>
+					<span class="o">.</span><span class="na">streamTo</span><span class="o">(</span><span class="nc">ChannelFileWriter</span><span class="o">.</span><span class="na">open</span><span class="o">(</span><span class="n">executor</span><span class="o">,</span> <span class="n">clientStorage</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="no">DOWNLOADED_FILE</span><span class="o">)))</span>
+					<span class="o">.</span><span class="na">whenResult</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%nFile '%s' successfully downloaded to '%s'%n%n"</span><span class="o">,</span>
+							<span class="no">REQUIRED_FILE</span><span class="o">,</span> <span class="n">clientStorage</span><span class="o">))</span>
+	<span class="o">);</span>
+	<span class="k">try</span> <span class="o">{</span>
+		<span class="n">future</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
+	<span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+		<span class="n">executor</span><span class="o">.</span><span class="na">shutdown</span><span class="o">();</span>
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileDownloadExample.java">See full source code on GitHub</a></strong></p>
+
+<h3 id="activefs-decorator">ActiveFs Decorator</h3>
+<p>Sometimes you may need to override/expand the default behavior of <code class="language-plaintext highlighter-rouge">ActiveFs</code> implementation. To do so, you may utilize a 
+<a href="https://en.wikipedia.org/wiki/Decorator_pattern">Decorator</a> pattern. 
+<a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/DecoratedActiveFsExample.java"><strong>DecoratedActiveFsExample</strong></a>
+demonstrates how to do just that. It decorates <code class="language-plaintext highlighter-rouge">ActiveFs</code> implementation by adding additional logging for file uploads and downloads.</p>
+
+<p><code class="language-plaintext highlighter-rouge">DecoratedActiveFsExample</code> extends <code class="language-plaintext highlighter-rouge">ServerSetupExample</code> so it inherits its DI bindings. First, we need to override
+the binding for <code class="language-plaintext highlighter-rouge">ActiveFsServer</code> to pass decorated <code class="language-plaintext highlighter-rouge">ActiveFs</code> instead of the original one. To do so, we will override 
+<code class="language-plaintext highlighter-rouge">Launcher#getOverrideModule</code> method and provide a new binding for <code class="language-plaintext highlighter-rouge">AsyncFsServer</code> that uses decorated <code class="language-plaintext highlighter-rouge">ActiveFs</code>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Override</span>
+<span class="kd">protected</span> <span class="nc">Module</span> <span class="nf">getOverrideModule</span><span class="o">()</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="k">new</span> <span class="nf">AbstractModule</span><span class="o">()</span> <span class="o">{</span>
+		<span class="nd">@Eager</span>
+		<span class="nd">@Provides</span>
+		<span class="nc">ActiveFsServer</span> <span class="nf">activeFsServer</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nd">@Named</span><span class="o">(</span><span class="s">"decorated"</span><span class="o">)</span> <span class="nc">ActiveFs</span> <span class="n">decoratedFs</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="nc">ActiveFsServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">decoratedFs</span><span class="o">)</span>
+					<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofActiveFsServer</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs"</span><span class="o">)));</span>
+		<span class="o">}</span>
+
+		<span class="nd">@Provides</span>
+		<span class="nd">@Named</span><span class="o">(</span><span class="s">"decorated"</span><span class="o">)</span>
+		<span class="nc">ActiveFs</span> <span class="nf">decoratedActiveFs</span><span class="o">(</span><span class="nc">ActiveFs</span> <span class="n">fs</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">return</span> <span class="k">new</span> <span class="nf">LoggingActiveFs</span><span class="o">(</span><span class="n">fs</span><span class="o">);</span>
+		<span class="o">}</span>
+	<span class="o">};</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>As you can see in <code class="language-plaintext highlighter-rouge">decoratedActiveFs(ActiveFs fs)</code> method, we request original <code class="language-plaintext highlighter-rouge">ActiveFs</code> and return the decorated one 
+(wrapped in <code class="language-plaintext highlighter-rouge">LoggingActiveFs</code>).</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">LoggingActiveFs</span> <span class="kd">extends</span> <span class="nc">ForwardingActiveFs</span> <span class="o">{</span>
+	<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="nc">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="nc">LoggingActiveFs</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+	<span class="kd">public</span> <span class="nf">LoggingActiveFs</span><span class="o">(</span><span class="nc">ActiveFs</span> <span class="n">peer</span><span class="o">)</span> <span class="o">{</span>
+		<span class="kd">super</span><span class="o">(</span><span class="n">peer</span><span class="o">);</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="nc">Promise</span><span class="o">&lt;</span><span class="nc">ChannelConsumer</span><span class="o">&lt;</span><span class="nc">ByteBuf</span><span class="o">&gt;&gt;</span> <span class="nf">upload</span><span class="o">(</span><span class="nd">@NotNull</span> <span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">long</span> <span class="n">size</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">upload</span><span class="o">(</span><span class="n">name</span><span class="o">)</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">consumer</span> <span class="o">-&gt;</span> <span class="o">{</span>
+					<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Starting upload of file: {}. File size is {} bytes"</span><span class="o">,</span> <span class="n">name</span><span class="o">,</span> <span class="n">size</span><span class="o">);</span>
+					<span class="k">return</span> <span class="n">consumer</span>
+							<span class="o">.</span><span class="na">withAcknowledgement</span><span class="o">(</span><span class="n">ack</span> <span class="o">-&gt;</span> <span class="n">ack</span>
+									<span class="o">.</span><span class="na">whenResult</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Upload of file {} finished"</span><span class="o">,</span> <span class="n">name</span><span class="o">)));</span>
+				<span class="o">});</span>
+	<span class="o">}</span>
+
+	<span class="nd">@Override</span>
+	<span class="kd">public</span> <span class="nc">Promise</span><span class="o">&lt;</span><span class="nc">ChannelSupplier</span><span class="o">&lt;</span><span class="nc">ByteBuf</span><span class="o">&gt;&gt;</span> <span class="nf">download</span><span class="o">(</span><span class="nd">@NotNull</span> <span class="nc">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">long</span> <span class="n">offset</span><span class="o">,</span> <span class="kt">long</span> <span class="n">limit</span><span class="o">)</span> <span class="o">{</span>
+		<span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">download</span><span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">offset</span><span class="o">,</span> <span class="n">limit</span><span class="o">)</span>
+				<span class="o">.</span><span class="na">map</span><span class="o">(</span><span class="n">supplier</span> <span class="o">-&gt;</span> <span class="o">{</span>
+					<span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Starting downloading file: {}"</span><span class="o">,</span> <span class="n">name</span><span class="o">);</span>
+					<span class="k">return</span> <span class="n">supplier</span>
+							<span class="o">.</span><span class="na">withEndOfStream</span><span class="o">(</span><span class="n">eos</span> <span class="o">-&gt;</span> <span class="n">eos</span>
+									<span class="o">.</span><span class="na">whenResult</span><span class="o">(()</span> <span class="o">-&gt;</span> <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">"Download of file {} finished"</span><span class="o">,</span> <span class="n">name</span><span class="o">)));</span>
+				<span class="o">});</span>
+
+	<span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><code class="language-plaintext highlighter-rouge">LoggingActiveFs</code> extends <code class="language-plaintext highlighter-rouge">ForwardingActiveFs</code> which simply delegates all of the <code class="language-plaintext highlighter-rouge">ActiveFs</code> method calls to some underlying 
+<code class="language-plaintext highlighter-rouge">ActiveFs</code> instance. We override methods we want to decorate (<code class="language-plaintext highlighter-rouge">download</code>, <code class="language-plaintext highlighter-rouge">upload</code>) and add custom logging messages when 
+upload/download starts and finishes.</p>
+
+<p>You can run <a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileUploadExample.java">FileUploadExample</a> 
+followed by <a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/FileDownloadExample.java">FileDownloadExample</a>.
+After this you should see logging output:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">INFO Starting upload of file: example.txt. File size is 12 bytes
+INFO Upload of file example.txt finished
+INFO Starting downloading file: example.txt
+INFO Download of file example.txt finished</code></pre></figure>
+
+<p><strong><a href="https://github.com/activej/activej/blob/v4.3/examples/cloud/fs/src/main/java/DecoratedActiveFsExample.java">See full source code on GitHub</a></strong></p>
+
+<h3 id="cluster-file-storage">Cluster File Storage</h3>
+<p>With ActiveJ FS you can simply create distributed cluster file storage with high fault tolerance. We will use Docker to 
+launch three virtual servers and one client. The storage will support file uploads with automatic 
+repartitioning according to the provided rule and replication count.</p>
+
+<p>The first thing we need to do is to create a launcher class <strong>ClusterTcpServerLauncher</strong> for our server. Extend 
+<a href="https://github.com/activej/activej/blob/v4.3/launchers/fs/src/main/java/io/activej/launchers/fs/SimpleTcpServerLauncher.java"><strong>SimpleTcpServerLauncher</strong></a> 
+to get all the required instances: <a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/tcp/ActiveFsServer.java"><strong>ActiveFsServer</strong></a>, 
+local <a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/ActiveFs.java"><strong>ActiveFS</strong></a>, 
+<a href="https://github.com/activej/activej/blob/v4.3/core-http/src/main/java/io/activej/http/AsyncHttpServer.java"><strong>AsyncHttpServer</strong></a> 
+for GUI that will simplify working with your storage, and other helper instances. In the <strong>ClusterTcpServerLauncher</strong> 
+we’ll only need to set up utils for repartitioning management like task schedulers, <a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/cluster/ClusterRepartitionController.java"><strong>ClusterRepartitionController</strong></a>, 
+and <a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/cluster/FsPartitions.java"><strong>FsPartitions</strong></a> 
+for tracking alive partitions and their statuses. The partitions will communicate via TCP protocol, while GUI server will 
+use HTTP.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nd">@Eager</span>
+<span class="nd">@Named</span><span class="o">(</span><span class="s">"repartition"</span><span class="o">)</span>
+<span class="nc">EventloopTaskScheduler</span> <span class="nf">repartitionScheduler</span><span class="o">(</span><span class="nc">Config</span> <span class="n">config</span><span class="o">,</span> <span class="nc">ClusterRepartitionController</span> <span class="n">controller</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">EventloopTaskScheduler</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">controller</span><span class="o">.</span><span class="na">getEventloop</span><span class="o">(),</span> <span class="nl">controller:</span><span class="o">:</span><span class="n">repartition</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofEventloopTaskScheduler</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.repartition"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nd">@Eager</span>
+<span class="nd">@Named</span><span class="o">(</span><span class="s">"clusterDeadCheck"</span><span class="o">)</span>
+<span class="nc">EventloopTaskScheduler</span> <span class="nf">deadCheckScheduler</span><span class="o">(</span><span class="nc">Config</span> <span class="n">config</span><span class="o">,</span> <span class="nc">FsPartitions</span> <span class="n">partitions</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">EventloopTaskScheduler</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">partitions</span><span class="o">.</span><span class="na">getEventloop</span><span class="o">(),</span> <span class="nl">partitions:</span><span class="o">:</span><span class="n">checkDeadPartitions</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofEventloopTaskScheduler</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.repartition.deadCheck"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">ClusterRepartitionController</span> <span class="nf">repartitionController</span><span class="o">(</span><span class="nc">Config</span> <span class="n">config</span><span class="o">,</span> <span class="nc">ActiveFsServer</span> <span class="n">localServer</span><span class="o">,</span> <span class="nc">FsPartitions</span> <span class="n">partitions</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">String</span> <span class="n">localPartitionId</span> <span class="o">=</span> <span class="n">first</span><span class="o">(</span><span class="n">partitions</span><span class="o">.</span><span class="na">getAllPartitions</span><span class="o">());</span>
+	<span class="k">assert</span> <span class="n">localPartitionId</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">;</span>
+
+	<span class="k">return</span> <span class="nc">ClusterRepartitionController</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">localPartitionId</span><span class="o">,</span> <span class="n">partitions</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofClusterRepartitionController</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.repartition"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">FsPartitions</span> <span class="nf">fsPartitions</span><span class="o">(</span><span class="nc">Config</span> <span class="n">config</span><span class="o">,</span> <span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nd">@Optional</span> <span class="nc">ServerSelector</span> <span class="n">serverSelector</span><span class="o">,</span> <span class="nc">ActiveFs</span> <span class="n">fs</span><span class="o">)</span> <span class="o">{</span>
+	<span class="nc">Map</span><span class="o">&lt;</span><span class="nc">Object</span><span class="o">,</span> <span class="nc">ActiveFs</span><span class="o">&gt;</span> <span class="n">partitions</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">LinkedHashMap</span><span class="o">&lt;&gt;();</span>
+	<span class="n">partitions</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"activefs.repartition.localPartitionId"</span><span class="o">),</span> <span class="n">fs</span><span class="o">);</span>
+
+	<span class="k">return</span> <span class="nc">FsPartitions</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">partitions</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withServerSelector</span><span class="o">(</span><span class="n">nullToDefault</span><span class="o">(</span><span class="n">serverSelector</span><span class="o">,</span> <span class="no">RENDEZVOUS_HASH_SHARDER</span><span class="o">))</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofFsPartitions</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.cluster"</span><span class="o">)));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now we can move on to creating a client launcher <strong>ClusterTcpClientLauncher</strong>. We need to provide <strong>ClusterRepartitionController</strong> and 
+a task scheduler to detect dead partitions. Similarly to the server launcher, we need to provide an <strong>AsyncHttpServer</strong> 
+for GUI and <strong>FsPartitions</strong> for managing partitions. We also need an instance of 
+<a href="https://github.com/activej/activej/blob/v4.3/cloud-fs/src/main/java/io/activej/fs/cluster/ClusterActiveFs.java"><strong>ClusterActiveFs</strong></a> 
+class, an <strong>ActiveFs</strong> implementation that operates on other partitions as a cluster and contains some redundancy and 
+fail-safety capabilities.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Provides</span>
+<span class="nd">@Eager</span>
+<span class="nd">@Named</span><span class="o">(</span><span class="s">"clusterDeadCheck"</span><span class="o">)</span>
+<span class="nc">EventloopTaskScheduler</span> <span class="nf">deadCheckScheduler</span><span class="o">(</span><span class="nc">Config</span> <span class="n">config</span><span class="o">,</span> <span class="nc">FsPartitions</span> <span class="n">partitions</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">EventloopTaskScheduler</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">partitions</span><span class="o">.</span><span class="na">getEventloop</span><span class="o">(),</span> <span class="nl">partitions:</span><span class="o">:</span><span class="n">checkDeadPartitions</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofEventloopTaskScheduler</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.repartition.deadCheck"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nd">@Eager</span>
+<span class="nc">AsyncHttpServer</span> <span class="nf">guiServer</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">AsyncServlet</span> <span class="n">servlet</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">AsyncHttpServer</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">,</span> <span class="n">servlet</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofHttpServer</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.http.gui"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">AsyncServlet</span> <span class="nf">guiServlet</span><span class="o">(</span><span class="nc">ActiveFs</span> <span class="n">activeFs</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">ActiveFsGuiServlet</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">activeFs</span><span class="o">,</span> <span class="s">"Cluster FS Client"</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">ActiveFs</span> <span class="nf">remoteActiveFs</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">FsPartitions</span> <span class="n">partitions</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">ClusterActiveFs</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">partitions</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofClusterActiveFs</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.cluster"</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="nd">@Provides</span>
+<span class="nc">FsPartitions</span> <span class="nf">fsPartitions</span><span class="o">(</span><span class="nc">Eventloop</span> <span class="n">eventloop</span><span class="o">,</span> <span class="nc">Config</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
+	<span class="k">return</span> <span class="nc">FsPartitions</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">eventloop</span><span class="o">)</span>
+			<span class="o">.</span><span class="na">withInitializer</span><span class="o">(</span><span class="n">ofFsPartitions</span><span class="o">(</span><span class="n">config</span><span class="o">.</span><span class="na">getChild</span><span class="o">(</span><span class="s">"activefs.cluster"</span><span class="o">)));</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Here’s the architecture of our distributed P2P storage:</p>
+<figure class="figure-image">
+    <img src="/static/images/activefs.png" style="max-width: 600px;" />
+</figure>
+
+<p>You can create as many partitions as you wish.</p>
+
+<p>To launch the example, run the following scripts to create Docker images and build containers (run all the scripts under 
+<code class="language-plaintext highlighter-rouge">activej/launchers/fs</code> directory):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># building two images for server and client</span>
+docker build <span class="nt">-t</span> cluster-server <span class="nt">-f</span> ClusterServerDockerfile <span class="nb">.</span>
+docker build <span class="nt">-t</span> cluster-client <span class="nt">-f</span> ClusterClientDockerfile <span class="nb">.</span>
+<span class="c"># launching all the servers and client instances in background</span>
+docker-compose up <span class="nt">-d</span></code></pre></figure>
+
+<p>The containers will be built with the following configurations:</p>
+<ul>
+  <li><strong>Server1</strong>: TCP-connection port <code class="language-plaintext highlighter-rouge">9001</code>, HTTP GUI port <code class="language-plaintext highlighter-rouge">8081</code></li>
+  <li><strong>Server2</strong>: TCP-connection port <code class="language-plaintext highlighter-rouge">9002</code>, HTTP GUI port <code class="language-plaintext highlighter-rouge">8082</code></li>
+  <li><strong>Server3</strong>: TCP-connection port <code class="language-plaintext highlighter-rouge">9003</code>, HTTP GUI port <code class="language-plaintext highlighter-rouge">8083</code></li>
+  <li><strong>Client</strong>: HTTP GUI port <code class="language-plaintext highlighter-rouge">8080</code></li>
+</ul>
+
+<p>Use this script to manage containers:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># to stop a single container:</span>
+docker-compose stop server1
+<span class="c"># to stop all the containers:</span>
+docker-compose down
+<span class="c"># check containers status:</span>
+docker-compose ps</code></pre></figure>
+
+<p><strong><a href="https://github.com/activej/activej/blob/v4.3/launchers/fs">See full source code on GitHub</a></strong></p>
+
+    <div class="row docs-prevnext">
+        
+            <div class="col-sm-6"></div>
+        
+        
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        <div class="container justify-content-between footer">
+            <div class="col-md-4 col-lg-5"> &copy; 2021 ActiveJ LLC. All Rights Reserved</div>
+            <div class="col-md-4 col-lg-3">Contact us: contact@activej.io</div>
+            <div class="col-md-8 col-lg-4 footer__menu">
+                <a href="http://uikernel.io">UIKernel</a>
+                <a href="https://adkernel.com">AdKernel</a>
+                <a href="https://github.com/activej/activej">GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="../static/js/leon.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
